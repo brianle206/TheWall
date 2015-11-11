@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TheWall</title>
+</head>
+<body>
+	<h1>Welcome To the Wall '<name>'</h1>
+	{% for messages in message%}
+		<p>{{messages}}<p>
+	<form action='/comment' method='post'>
+		<textarea type='text' name='comment'></textarea>
+		<input type='submit' name='post'>
+	</form>
+	{% endfor %}
+	<form action='/post' method='post'>
+		<textarea type='text' name='content'></textarea>
+		<input type='submit' name='submit'>
+	</form>
+</body>
+</html>
